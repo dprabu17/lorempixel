@@ -19,7 +19,7 @@ module Lorempixel
 		      # lorempixel  option
 		      	
 		      if config[:type]
-		      	src = "http://lorempixel.com/#{config[:type]}/#{size}"
+		      	src = "http://lorempixel.com/#{config[:type]}/#{config[:width]}/#{config[:height]}"
 		      end
 		      
 		      if config[:text]
