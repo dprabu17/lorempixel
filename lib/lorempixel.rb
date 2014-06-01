@@ -9,7 +9,7 @@ module Lorempixel
 		        :height => (size.split('x')[1] || size.split('x')[0]),
 		        :width => size.split('x')[0],
 		        :item => opts[:item],
-		        :text => opts[:text].gsub(/\s+/, "-"),
+		        :text => opts[:text].to_s.gsub(/\s+/, "-"),
 		        :category => opts[:category],
 		        :type => opts[:type]
 		      }.merge!(opts)
