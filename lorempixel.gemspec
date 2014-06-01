@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Lorempixel::VERSION
   spec.authors       = ["Prabu D"]
   spec.email         = ["prabud@spritle.com"]
-  spec.description   = %q{A Rails placeholder images via http://lorempixel.com}
-  spec.summary       = %q{A Rails placeholder images via http://lorempixel.com}
+  spec.description   = %q{A Rails view images via http://lorempixel.com}
+  spec.summary       = %q{A Rails view helper place an images via http://lorempixel.com}
   spec.homepage      = "https://github.com/spritle/lorempixel"
   spec.license       = "MIT"
 
