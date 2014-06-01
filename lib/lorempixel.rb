@@ -12,7 +12,7 @@ module Lorempixel
 		        :item => opts[:item],
 		        :text => opts[:text] || opts[:title],
 		        :category => opts[:category],
-		        :type => opts[:type] || 'color'
+		        :type => opts[:type]
 		      }.merge!(opts)
 		      # lorempixel  option
 
