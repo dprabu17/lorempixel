@@ -3,7 +3,7 @@ require "lorempixel/version"
 module Lorempixel
 	module ViewHelpers   
 		def lorempixel_image_tag(size, opts={})
-			size = "#{size}" unless size.is_a?(String)
+			size = "#{size.to_s}" unless size.is_a?(String)
       		config = {
 		        :alt => (opts[:text] || "A lorempixel image"),
 		        :height => (size.split('x')[1] || size.split('x')[0]),
@@ -27,15 +27,16 @@ module Lorempixel
 		      end
 
 		      if config[:category]
-		        src += "/#{config[:category]}"
+		      	category = "/#{config[:category]}"
 		        if config[:category_item]
-		        	src += "/#{config[:category]}/#{config[:category_item]}"
+		        	category += "/#{config[:category_item]}"
 		        	if config[:text]
-		        		src += "/#{config[:category]}/#{config[:category_item]}/#{config[:text]}"
+		        		category += "/#{config[:text]}"
 		        	end
 		        elsif config[:text]
-		        	src += "/#{config[:category]}/#{config[:text]}"
+		        	category += "/#{config[:text]}"
 		        end
+		        src += category
 		     end
 
 
