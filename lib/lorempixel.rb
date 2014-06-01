@@ -22,21 +22,16 @@ module Lorempixel
 		      	src = "http://lorempixel.com/#{config[:type]}/#{config[:width]}/#{config[:height]}"
 		      end
 		      
-		      if config[:text]
-		        src += "/#{config[:text]}"
-		      end
-
 		      if config[:category]
-		      	category = "/#{config[:category]}"
-		        if config[:category_item]
-		        	category += "/#{config[:category_item]}"
+		      	src += "/#{config[:category]}"
+		        if config[:item]
+		        	src += "/#{config[:item]}"
 		        	if config[:text]
-		        		category += "/#{config[:text]}"
+		        		src += "/#{config[:text]}"
 		        	end
 		        elsif config[:text]
-		        	category += "/#{config[:text]}"
+		        	src += "/#{config[:text]}"
 		        end
-		        src += category
 		     end
 
 
