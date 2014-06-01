@@ -4,7 +4,6 @@ module Lorempixel
 	module ViewHelpers   
 		def lorempixel_image_tag(size, opts={})
 			size = "#{size}" unless size.is_a?(String)
-      		src = "http://lorempixel.com/#{size}"
       		config = {
 		        :alt => (opts[:text] || "A lorempixel image"),
 		        :height => (size.split('x')[1] || size.split('x')[0]),
@@ -14,8 +13,12 @@ module Lorempixel
 		        :category => opts[:category],
 		        :type => opts[:type]
 		      }.merge!(opts)
+		      
+		      src = "http://lorempixel.com/#{config[:width]}/#{config[:height]}"
+		      
 		      # lorempixel  option
-
+		      	
+		      
 		      if config[:type]
 		      	src = "http://lorempixel.com/#{config[:type]}/#{size}"
 		      end
