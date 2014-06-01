@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Lorempixel::VERSION
   spec.authors       = ["Prabu D"]
   spec.email         = ["prabud@spritle.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A Rails placeholder images via http://lorempixel.com}
+  spec.summary       = %q{A Rails placeholder images via http://lorempixel.com}
+  spec.homepage      = "https://github.com/spritle/lorempixel"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

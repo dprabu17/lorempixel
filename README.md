@@ -1,6 +1,6 @@
 # Lorempixel
 
-TODO: Write a gem description
+A Rails view helper for placeholder images via http://lorempixel.com
 
 ## Installation
 
@@ -18,12 +18,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+to get a random picture of 400 x 400 pixels
+		
+	<%= lorempixel_image_tag "400" %>
 
-## Contributing
+to get a random picture of 400 x 200 pixels
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+	<%= lorempixel_image_tag "400X200" %>
+
+to get a random picture of the sports category:
+
+	<%= lorempixel_image_tag "400", :category => "sports" %>
+
+to get picture no. 1/10 from the sports category
+
+	<%= lorempixel_image_tag "400", :category => "sports", :item => 1 %>
+
+...with a custom text on the random Picture
+
+	<%= lorempixel_image_tag "400", :text => "Dummy-Text" %>
+
+...with a custom text on the selected Picture
+    
+    <%= lorempixel_image_tag "400X200", :text => "Dummy-Text", :type=> 'gray', :category => "sports", :item => 1 %>
+
+Alternatively, calling lorempixel will work as well:
+
+	<%= lorempixel "400" %>
