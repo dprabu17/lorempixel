@@ -9,16 +9,15 @@ module Lorempixel
 		        :height => (size.split('x')[1] || size.split('x')[0]),
 		        :width => size.split('x')[0],
 		        :item => opts[:item],
-		        :text => opts[:text] || opts[:title],
+		        :text => opts[:text].gsub(/\s+/, "-"),
 		        :category => opts[:category],
 		        :type => opts[:type]
 		      }.merge!(opts)
-		      
+
 		      src = "http://lorempixel.com/#{config[:width]}/#{config[:height]}"
 		      
 		      # lorempixel  option
 		      	
-		      
 		      if config[:type]
 		      	src = "http://lorempixel.com/#{config[:type]}/#{size}"
 		      end
