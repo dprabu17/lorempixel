@@ -10,6 +10,7 @@ module Lorempixel
 		        :width => size.split('x')[0],
 		        :item => opts[:item],
 		        :text => opts[:text].to_s.gsub(/\s+/, "-"),
+		        :title => opts[:text] || "A lorempixel image",
 		        :category => opts[:category],
 		        :type => opts[:type]
 		      }.merge!(opts)
@@ -36,7 +37,7 @@ module Lorempixel
 
 
 		      image_tag = "<img src='#{src}' alt='#{config[:alt]}' height='#{config[:height]}' width='#{config[:width]}'"
-		      image_tag += " title='#{config[:text]}'" if config[:text]
+		      image_tag += " title='#{config[:title]}'"
 		      image_tag += " />"
 		      return image_tag.html_safe if defined?(Rails)
 		      image_tag
