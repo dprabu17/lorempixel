@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'lorempixel/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "lorempixel_image"
+  spec.name          = "lorempixel"
   spec.version       = Lorempixel::VERSION
   spec.authors       = ["Prabu D"]
   spec.email         = ["prabud@spritle.com"]
