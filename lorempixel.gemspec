@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'lorempixel/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "lorempixel"
+  spec.name          = "lorempixel_image"
   spec.version       = Lorempixel::VERSION
   spec.authors       = ["Prabu D"]
   spec.email         = ["prabud@spritle.com"]
   spec.description   = %q{A Rails view images via http://lorempixel.com}
   spec.summary       = %q{A Rails view helper place an images via http://lorempixel.com}
-  spec.homepage      = "https://github.com/spritle/lorempixel"
+  spec.homepage      = "https://github.com/spritlesoftware/lorempixel"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

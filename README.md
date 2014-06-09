@@ -52,7 +52,9 @@ Alternatively, calling lorempixel will work as well:
 
 	<%= lorempixel "400" %>
 
+Testing
 
+rspec spec/
 
 Contributing
 
